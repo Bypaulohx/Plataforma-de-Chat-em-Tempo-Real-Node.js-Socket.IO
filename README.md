@@ -6,14 +6,14 @@ Uma aplicação de **chat em tempo real** com suporte a **salas privadas**, **em
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-* 🔑 **Criação e entrada em salas privadas** (com senha opcional)
-* 🔒 **Criptografia ponta a ponta (E2E)**: mensagens são cifradas no cliente antes de enviar
-* 😀 **Suporte a emojis** (via emoji-picker)
-* 👥 **Lista de usuários ativos** em cada sala
-* 🚪 **Entrar e sair de salas**
-* 🗑️ **Salas são apagadas automaticamente** quando ficam vazias (se não forem persistentes)
+*  **Criação e entrada em salas privadas** (com senha opcional)
+*  **Criptografia ponta a ponta (E2E)**: mensagens são cifradas no cliente antes de enviar
+*  **Suporte a emojis** (via emoji-picker)
+*  **Lista de usuários ativos** em cada sala
+*  **Entrar e sair de salas**
+*  **Salas são apagadas automaticamente** quando ficam vazias (se não forem persistentes)
 
 ---
 
@@ -21,23 +21,20 @@ Uma aplicação de **chat em tempo real** com suporte a **salas privadas**, **em
 
 ```bash
 realtime-chat/
-├── index.js             # Servidor Express + Socket.IO
+├── index.js             
 ├── package.json
-├── .env.example         # Variáveis de ambiente
+├── .env.example        
 ├── public/
-│   ├── index.html       # Interface web
-│   ├── css/
-│   │   └── style.css    # Estilos básicos
-│   └── js/
-│       └── client.js    # Lógica do cliente (E2E + chat)
-├── screenshots/         # Coloque prints de tela aqui
-├── README.md            # Este arquivo
-└── DEVELOPER.md         # Detalhes técnicos adicionais
+    ├── index.html      
+    ├── css/
+    │   └── style.css    
+    └── js/
+        └── client.js    
 ```
 
 ---
 
-## 🛠️ Instalação e Uso
+## Instalação e Uso
 
 ### 1. Clonar o repositório
 
