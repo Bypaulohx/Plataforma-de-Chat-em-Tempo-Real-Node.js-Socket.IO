@@ -24,7 +24,7 @@ realtime-chat/
 ├── index.js             
 ├── package.json
 ├── .env.example        
-├── public/
+└── public/
     ├── index.html      
     ├── css/
     │   └── style.css    
@@ -89,20 +89,7 @@ Abra em **duas abas/navegadores diferentes** para testar a comunicação.
 
 ---
 
-## 🖥️ Prints de Tela
-
-Adicione imagens na pasta `screenshots/` e insira abaixo:
-
-* Tela inicial:
-  ![Tela inicial](screenshots/home.png)
-* Criando sala:
-  ![Criando sala](screenshots/create-room.png)
-* Conversa com criptografia:
-  ![Chat E2E](screenshots/chat.png)
-
----
-
-## 🏗️ Arquitetura
+## Arquitetura
 
 ```mermaid
 graph TD
@@ -124,7 +111,7 @@ graph TD
 
 ---
 
-## 🔐 Criptografia ponta a ponta
+##  Criptografia ponta a ponta
 
 * Cada cliente gera um **par de chaves (pública/privada)** com TweetNaCl.
 * A chave pública é compartilhada com os outros usuários da sala.
@@ -133,7 +120,7 @@ graph TD
 
 ---
 
-## 📦 Dependências principais
+## Dependências principais
 
 * [express](https://www.npmjs.com/package/express)
 * [socket.io](https://socket.io/)
@@ -143,7 +130,7 @@ graph TD
 
 ---
 
-## 🚀 Deploy com Docker (opcional)
+## Deploy com Docker (opcional)
 
 Crie um `Dockerfile`:
 
@@ -163,19 +150,3 @@ Build e execute:
 docker build -t realtime-chat .
 docker run -p 3000:3000 realtime-chat
 ```
-
----
-
-## 🤝 Contribuição
-
-1. Faça um fork do projeto
-2. Crie uma branch (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. Envie a branch (`git push origin feature/nova-feature`)
-5. Abra um **Pull Request**
-
----
-
-## 📜 Licença
-
-Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
