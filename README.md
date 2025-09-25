@@ -91,7 +91,7 @@ Abra em **duas abas/navegadores diferentes** para testar a comunicação.
 
 ## Arquitetura
 
-```mermaid
+```
 graph TD
     subgraph Cliente
         UI[Interface Web]
