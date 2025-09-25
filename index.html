@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Realtime Chat - E2E (Demo)</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Realtime Chat (E2E) - Demo</h1>
+    </header>
+
+    <section class="panels">
+      <div class="panel" id="panel-setup">
+        <h2>Criar / Entrar em sala</h2>
+        <form id="create-room-form">
+          <input placeholder="Seu nome" id="create-username" required />
+          <input placeholder="Nome da sala (opcional)" id="create-room-name" />
+          <input placeholder="Senha da sala (opcional)" id="create-room-pass" />
+          <button type="submit">Criar sala</button>
+        </form>
+
+        <hr />
+
+        <form id="join-room-form">
+          <input placeholder="Seu nome" id="join-username" required />
+          <input placeholder="ID da sala" id="join-room-id" required />
+          <input placeholder="Senha da sala (se houver)" id="join-room-pass" />
+          <button type="submit">Entrar na sala</button>
+        </form>
+
+        <div id="room-info" class="hidden">
+          <p>Sala: <span id="room-id"></span></p>
+          <button id="leave-room">Sair da sala</button>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-chat">
+        <h2>Chat</h2>
+        <div id="users-list" class="users"></div>
+        <div id="messages" class="messages"></div>
+
+        <div class="composer">
+          <emoji-picker id="emoji-picker" style="display:none"></emoji-picker>
+          <button id="emoji-btn">😀</button>
+          <input id="message-input" placeholder="Digite sua mensagem..." />
+          <button id="send-btn">Enviar</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <small>Implementação educacional — não use em produção sem auditoria.</small>
+    </footer>
+  </div>
+
+  <!-- Socket.IO client -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- tweetnacl + util (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/tweetnacl@1.0.3/nacl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tweetnacl-util@0.15.1/nacl-util.min.js"></script>
+  <!-- emoji picker (web component) -->
+  <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.5.6/index.js"></script>
+  <script type="module" src="/js/client.js"></script>
+</body>
+</html>
